@@ -1,71 +1,84 @@
-Neural Network for Time-Series Prediction
-This repository contains the code and analysis for building, training, and evaluating neural network models to predict stock prices using historical data. The dataset used in this exercise is NVIDIA stock price data.
+# 📊 Neural Network for Time-Series Prediction
 
-Overview
-This project demonstrates how to preprocess time-series data, engineer features, and build a Recurrent Neural Network (RNN) to predict stock prices based on historical closing prices. The neural network is built using PyTorch. We experiment with different hyperparameters, evaluate the performance of the model, and provide insights into the results.
+![Python](https://img.shields.io/badge/Python-3.8-blue) 
+![PyTorch](https://img.shields.io/badge/PyTorch-1.10-red)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Project Structure
-data/: Contains the raw and processed dataset.
-models/: Contains the PyTorch model definitions and training scripts.
-notebooks/: Jupyter notebooks for data exploration and analysis (if applicable).
-README.md: This file, which provides an overview of the project.
-requirements.txt: List of required Python packages.
-Dataset
-The dataset used for this project is NVDA stock price data, obtained from Yahoo Finance. The data contains the historical stock prices of NVDA, including:
+This repository contains the code and analysis for building, training, and evaluating neural network models to predict stock prices using historical **NVIDIA (NVDA) stock price data**.
 
-Date: The date of the stock price data.
-Open: The opening price.
-High: The highest price.
-Low: The lowest price.
-Close: The closing price.
-Volume: The trading volume.
-The dataset spans the last 5 years.
+---
 
-Feature Engineering
-Before training the model, the data was preprocessed and engineered to create relevant features. The following steps were performed:
+## 📌 Overview
+This project demonstrates:
+✅ **Preprocessing** and feature engineering for time-series data  
+✅ Building a **Recurrent Neural Network (RNN)** using PyTorch  
+✅ Experimenting with **hyperparameters**  
+✅ Evaluating model performance using **Mean Squared Error (MSE)**  
+✅ **Insights** and areas for improvement  
 
-Lag Features: A lag of 5 days for the closing price was created to provide past values as features for prediction.
-Rolling Statistics: A rolling mean and standard deviation over the past 10 days were added as features to capture trends and volatility.
-Normalization: The features were scaled using MinMaxScaler to normalize the data, ensuring that the model can learn efficiently.
-Train-Test Split: The dataset was split into 80% training data and 20% testing data.
-Neural Network Model
-An RNN (Recurrent Neural Network) was chosen for this exercise due to the sequential nature of the stock price data. The architecture consists of the following components:
+---
 
-Input Layer: Takes in the normalized features (lag values, rolling mean, rolling standard deviation).
-RNN Layer: A recurrent layer that processes the sequential nature of the data.
-Fully Connected Layer: Outputs the predicted closing price.
-Hyperparameters
-During the training process, the following hyperparameters were experimented with:
+## 📂 Project Structure
+📦 project-folder ├── 📁 data/ # Raw & processed dataset ├── 📁 models/ # PyTorch model definitions & training scripts ├── 📁 notebooks/ # Jupyter notebooks for exploration (if applicable) ├── 📄 README.md # Project documentation ├── 📄 requirements.txt # Required Python packages
 
-Learning Rate: 0.0005
-Number of Epochs: 20
-Batch Size: 1
-Hidden Size: 50 (number of neurons in the RNN layer)
-Activation Function: Default ReLU for the fully connected layer.
 
-Training and Evaluation
-The model was trained using the Mean Squared Error (MSE) loss function and the Adam optimizer. Training was performed for 20 epochs, with the loss calculated on the training and validation datasets.
+---
 
-After training, the model's performance was evaluated on the test set, and the MSE for the test set was computed. Hyperparameters such as the learning rate and number of epochs were adjusted to see their effect on model performance.
+## 📊 **Dataset**
+The dataset consists of historical **NVDA stock prices** from **Yahoo Finance**.
 
-Results
-MSE on the Training Set: [Insert result here]
-MSE on the Test Set: [Insert result here]
-From these results, we observed that adjusting the number of layers, neurons, and learning rate helped improve the model's accuracy in predicting stock prices.
+| Feature  | Description |
+|----------|------------|
+| `Date`   | Date of stock price data |
+| `Open`   | Opening price of the stock |
+| `High`   | Highest price of the day |
+| `Low`    | Lowest price of the day |
+| `Close`  | Closing price of the stock (target) |
+| `Volume` | Number of shares traded |
 
-Future Work
-Hyperparameter Tuning: Further hyperparameter tuning could be done to improve the model’s performance, such as experimenting with the number of layers, neurons, or different optimizers.
-Model Improvement: Other sequential models like LSTMs or GRUs could be explored for better handling of long-term dependencies in the data.
-Feature Engineering: Additional features such as technical indicators (e.g., moving averages, RSI) could be incorporated for more accurate predictions.
-Requirements
-To run the code, install the required dependencies:
+🕒 **Data Span:** Last **5 years** of daily trading data.
 
-Dependencies:
-PyTorch
-Pandas
-NumPy
-Scikit-learn
-Matplotlib
-Yahoo Finance (yfinance)
+---
 
-This README file provides a clear overview of the repository, steps taken in data preprocessing and feature engineering, the neural network architecture used, the training process, and the results obtained. You can customize the content and expand on any part if you have additional details to share.
+## 🔨 **Feature Engineering**
+Before training the model, several preprocessing steps were performed:
+
+- **🔄 Lag Features:** Created **5-day lag** of closing prices to provide past values as inputs.  
+- **📈 Rolling Statistics:** Added **10-day rolling mean & standard deviation** to capture trends & volatility.  
+- **📊 Normalization:** Applied **MinMaxScaler** to scale the features for better model learning.  
+- **✂️ Train-Test Split:** **80% training, 20% testing** data split.
+
+---
+
+## 🏗 **Neural Network Model**
+Since stock price data is **sequential**, an **RNN (Recurrent Neural Network)** was implemented.
+
+### 🔹 **Model Architecture**
+1️⃣ **Input Layer** → Normalized features (**lag values, rolling mean, rolling std**).  
+2️⃣ **RNN Layer** → Processes sequential stock price data.  
+3️⃣ **Fully Connected Layer** → Outputs the predicted closing price.
+
+```python
+import torch.nn as nn
+
+class RNNModel(nn.Module):
+    def __init__(self, input_size, hidden_size=50, output_size=1):
+        super(RNNModel, self).__init__()
+        self.rnn = nn.RNN(input_size, hidden_size, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        out, _ = self.rnn(x)
+        return self.fc(out[:, -1, :])
+
+
+🎛 Hyperparameters
+During training, different hyperparameters were tested:
+
+Parameter	Value
+Learning Rate	0.0005
+Number of Epochs	20
+Batch Size	1
+Hidden Size	50
+Activation	ReLU (default for fully connected layer)
+
