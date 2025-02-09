@@ -157,12 +157,12 @@ pip install -r requirements.txt
 ```
 
 📦 Dependencies
-PyTorch
-Pandas
-NumPy
-Scikit-learn
-Matplotlib
-Yahoo Finance (yfinance)
+- PyTorch
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Yahoo Finance (yfinance)
 
 ## 📜 License
 This project is licensed under the MIT License.
