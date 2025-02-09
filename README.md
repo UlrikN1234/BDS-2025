@@ -24,7 +24,7 @@ This project demonstrates:
 ---
 
 ## 📊 Dataset
-The dataset consists of historical **NVDA stock prices** from **Yahoo Finance**.
+The dataset consists of historical **NVIDIA stock prices** from **Yahoo Finance**.
 
 | Feature          | Description |
 |-----------------|-------------|
