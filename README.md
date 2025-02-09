@@ -164,7 +164,4 @@ pip install -r requirements.txt
 - Matplotlib
 - Yahoo Finance (yfinance)
 
-## 📜 License
-This project is licensed under the MIT License.
-
 🔗 Contributions are welcome! Feel free to fork and improve the model.
