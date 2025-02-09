@@ -144,8 +144,7 @@ The model was trained using:
 
 - Loss Function: Mean Squared Error (MSE)
 - Optimizer: Adam
-- Epochs: 20
-After training, the model was evaluated on the test set, and the performance was measured using MSE.
+After training, the model was evaluated on the test set, and the performance was measured using MSE and visualization 
 
 ## ⚙️ Installation & Setup
 To run the project, install the required dependencies:
