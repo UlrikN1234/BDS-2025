@@ -132,6 +132,7 @@ with torch.no_grad():
     test_predictions = model(X_test_tensor)
     test_loss = criterion(test_predictions, y_test_tensor)
     print(f'Test MSE: {test_loss.item()}')
+
 🎛 Hyperparameters
 During training, different hyperparameters were tested:
 
@@ -141,6 +142,7 @@ Number of Epochs	20
 Batch Size	1
 Hidden Size	50
 Activation	ReLU (default for fully connected layer)
+
 📈 Training & Evaluation
 The model was trained using:
 
@@ -149,22 +151,9 @@ Optimizer: Adam
 Epochs: 20
 After training, the model was evaluated on the test set, and the performance was measured using MSE.
 
-📊 Results
-Dataset	Mean Squared Error (MSE)
-Train	[Insert result]
-Test	[Insert result]
-📉 Loss Curve Plot (Example)
-
-🚀 Future Work
-🔹 Hyperparameter tuning: Try different layer sizes, optimizers, and activation functions.
-🔹 Model improvement: Experiment with LSTM/GRU networks for better sequence modeling.
-🔹 Feature engineering: Add technical indicators like RSI, MACD for more robust predictions.
 ⚙️ Installation & Setup
 To run the project, install the required dependencies:
 
-git clone https://github.com/yourusername/stock-prediction.git
-cd stock-prediction
-pip install -r requirements.txt
 📦 Dependencies
 PyTorch
 Pandas
@@ -172,6 +161,7 @@ NumPy
 Scikit-learn
 Matplotlib
 Yahoo Finance (yfinance)
+
 📜 License
 This project is licensed under the MIT License.
 
