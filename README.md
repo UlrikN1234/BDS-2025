@@ -150,8 +150,8 @@ After training, the model was evaluated on the test set, and the performance was
 To run the project, install the required dependencies:
 
 ``` python
-git clone https://github.com/yourusername/stock-prediction.git
-cd stock-prediction
+git clone https://github.com/UlrikN1234/BDS-2025.git
+cd BDS-2025
 pip install -r requirements.txt
 ```
 
