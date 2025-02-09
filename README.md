@@ -18,8 +18,9 @@ This project demonstrates:
 ---
 
 ## 📂 Project Structure
-📦 stock-price-prediction ├── 📁 data/ # Raw & processed dataset ├── 📁 models/ # PyTorch model definitions & training scripts ├── 📁 notebooks/ # Jupyter notebooks for exploration (if applicable) ├── 📄 README.md # Project documentation ├── 📄 requirements.txt # Required Python packages
-
+├── 📁 M3_Excercise_1_RNN/        # RNN model definition and training script
+├── 📄 README.md                  # Project documentation
+├── 📄 requirements.txt           # Required Python packages
 ---
 
 ## 📊 Dataset
