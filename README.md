@@ -13,8 +13,6 @@ This project demonstrates:
 - ✅ Building a **Recurrent Neural Network (RNN)** using PyTorch  
 - ✅ Experimenting with **hyperparameters**  
 - ✅ Evaluating model performance using **Mean Squared Error (MSE)**  
-- ✅ **Insights** and areas for improvement  
-
 ---
 
 ## 📂 Project Structure
