@@ -127,6 +127,7 @@ with torch.no_grad():
     test_predictions = model(X_test_tensor)
     test_loss = criterion(test_predictions, y_test_tensor)
     print(f'Test MSE: {test_loss.item()}')
+```
 
 ## 🎛 Hyperparameters
 During training, different hyperparameters were tested:
