@@ -21,10 +21,6 @@ This project demonstrates:
 ## 📂 Project Structure
 📦 stock-price-prediction ├── 📁 data/ # Raw & processed dataset ├── 📁 models/ # PyTorch model definitions & training scripts ├── 📁 notebooks/ # Jupyter notebooks for exploration (if applicable) ├── 📄 README.md # Project documentation ├── 📄 requirements.txt # Required Python packages
 
-python
-Kopiér
-Rediger
-
 ---
 
 ## 📊 Dataset
@@ -166,9 +162,6 @@ Test	[Insert result]
 ⚙️ Installation & Setup
 To run the project, install the required dependencies:
 
-bash
-Kopiér
-Rediger
 git clone https://github.com/yourusername/stock-prediction.git
 cd stock-prediction
 pip install -r requirements.txt
