@@ -132,19 +132,19 @@ with torch.no_grad():
 ## 🎛 Hyperparameters
 During training, different hyperparameters were tested:
 
-Parameter	Value
-Learning Rate	0.001 & 0.0005
-Number of Epochs	20 & 100
-Batch Size	1
-Hidden Size	50
-Activation	ReLU (default for fully connected layer)
+- Parameter	Value
+- Learning Rate	0.001 & 0.0005
+- Number of Epochs	20 & 100
+- Batch Size	1
+- Hidden Size	50
+- Activation	ReLU (default for fully connected layer)
 
 ## 📈 Training & Evaluation
 The model was trained using:
 
-Loss Function: Mean Squared Error (MSE)
-Optimizer: Adam
-Epochs: 20
+- Loss Function: Mean Squared Error (MSE)
+- Optimizer: Adam
+- Epochs: 20
 After training, the model was evaluated on the test set, and the performance was measured using MSE.
 
 ## ⚙️ Installation & Setup
