@@ -150,6 +150,12 @@ After training, the model was evaluated on the test set, and the performance was
 ## ⚙️ Installation & Setup
 To run the project, install the required dependencies:
 
+``` python
+git clone https://github.com/yourusername/stock-prediction.git
+cd stock-prediction
+pip install -r requirements.txt
+```
+
 📦 Dependencies
 PyTorch
 Pandas
