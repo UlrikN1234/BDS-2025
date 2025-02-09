@@ -26,14 +26,12 @@ This project demonstrates:
 ## 📊 Dataset
 The dataset consists of historical **NVDA stock prices** from **Yahoo Finance**.
 
-| Feature  | Description |
-|----------|------------|
-| `Date`   | Date of stock price data |
-| `Open`   | Opening price of the stock |
-| `High`   | Highest price of the day |
-| `Low`    | Lowest price of the day |
-| `Close`  | Closing price of the stock (target) |
-| `Volume` | Number of shares traded |
+| Feature          | Description |
+|-----------------|-------------|
+| `Close Price`   | The closing price of the stock (target variable) |
+| `Lag5`         | Closing price from 5 days ago, used as a lag feature |
+| `Rolling_mean_10` | 10-day rolling average of the closing price to capture trends |
+| `Rolling_sd_10`   | 10-day rolling standard deviation of the closing price to measure volatility |
 
 🕒 **Data Span:** Last **5 years** of daily trading data.
 
