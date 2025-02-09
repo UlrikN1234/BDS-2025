@@ -128,7 +128,7 @@ with torch.no_grad():
     test_loss = criterion(test_predictions, y_test_tensor)
     print(f'Test MSE: {test_loss.item()}')
 
-🎛 Hyperparameters
+## 🎛 Hyperparameters
 During training, different hyperparameters were tested:
 
 Parameter	Value
@@ -138,7 +138,7 @@ Batch Size	1
 Hidden Size	50
 Activation	ReLU (default for fully connected layer)
 
-📈 Training & Evaluation
+## 📈 Training & Evaluation
 The model was trained using:
 
 Loss Function: Mean Squared Error (MSE)
@@ -146,7 +146,7 @@ Optimizer: Adam
 Epochs: 20
 After training, the model was evaluated on the test set, and the performance was measured using MSE.
 
-⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 To run the project, install the required dependencies:
 
 📦 Dependencies
@@ -157,7 +157,7 @@ Scikit-learn
 Matplotlib
 Yahoo Finance (yfinance)
 
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 
 🔗 Contributions are welcome! Feel free to fork and improve the model.
