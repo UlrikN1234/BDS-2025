@@ -18,9 +18,11 @@ This project demonstrates:
 ---
 
 ## 📂 Project Structure
+```python
 ├── 📁 M3_Excercise_1_RNN/        # RNN model definition and training script
 ├── 📄 README.md                  # Project documentation
 ├── 📄 requirements.txt           # Required Python packages
+```
 ---
 
 ## 📊 Dataset
