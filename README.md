@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue) 
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.5-red)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 This repository contains the code and analysis for building, training, and evaluating neural network models to predict stock prices using historical **NVIDIA (NVDA) stock price data**.
 
