@@ -135,8 +135,8 @@ with torch.no_grad():
 During training, different hyperparameters were tested:
 
 Parameter	Value
-Learning Rate	0.0005
-Number of Epochs	20
+Learning Rate	0.001 & 0.0005
+Number of Epochs	20 & 100
 Batch Size	1
 Hidden Size	50
 Activation	ReLU (default for fully connected layer)
